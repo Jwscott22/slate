@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;javascript&quot;,&quot;json&quot;,&quot;html&quot;]">
+  <body class="index" data-languages="[&quot;http&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,9 +211,7 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="javascript">javascript</a>
-              <a href="#" data-language-name="json">json</a>
-              <a href="#" data-language-name="html">html</a>
+              <a href="#" data-language-name="http">http</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,6 +220,9 @@
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#configuration" class="toc-h1 toc-link" data-title="configuration">Configuration</a>
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
@@ -255,24 +256,25 @@
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the Moogsoft developer guide. You can use these API endpoints to integrate with external services and expose selected Moogsoft AIOps functionality to authorized external clients.</p>
 
-<p>We have language bindings in Shell, Ruby, and Python You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
 <p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<h1 id='configuration'>Configuration</h1>
+<p>The Graze API is implemented as a set of servlets running in the Moogsoft AIOps Tomcat instance that handles external Graze requests, making the UI servlet calls directly via cross-contexts. </p>
+
+<p>Tomcat must be configured to allow cross-context calls to be made by adding the following to the context.xml file in the Tomcat $APPSERVER_HOME/conf directory:
+<code>http
+&lt;Context crossContext=&quot;true&quot;&gt;
+</code></p>
 <h1 id='authentication'>Authentication</h1>
-<blockquote>
 <p>The Graze API supports basic authentication. You can use the default Grazer user credentials for this:</p>
-</blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="nx">username</span><span class="p">:</span> <span class="nx">graze</span>
-<span class="nl">password</span><span class="p">:</span> <span class="nx">graze</span>
-</code></pre>
-<blockquote>
+<pre class="highlight http tab-http"><code><span class="err">username: graze
+password: graze
+</span></code></pre>
 <p>All Graze requests use the following URL format, where server is the hostname of the machine running the UI</p>
-</blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="nx">https</span><span class="p">:</span><span class="c1">//&lt;server&gt;/graze/v1/authenticate</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>sever</code> with your instance name.</p>
-</blockquote>
+<pre class="highlight http tab-http"><code><span class="err">https://&lt;server&gt;/graze/v1/authenticate
+</span></code></pre>
+<p>Make sure to replace <code>&lt;server&gt;</code> with your instance name.</p>
 <h1 id='alerts'>Alerts</h1><h2 id='get-all-alerts'>Get All Alerts</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
@@ -478,9 +480,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="javascript">javascript</a>
-                <a href="#" data-language-name="json">json</a>
-                <a href="#" data-language-name="html">html</a>
+                <a href="#" data-language-name="http">http</a>
           </div>
       </div>
     </div>
