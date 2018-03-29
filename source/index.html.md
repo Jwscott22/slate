@@ -2,9 +2,7 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - javascript
-  - json
-  - html
+  - http
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -20,26 +18,26 @@ search: true
 
 Welcome to the Moogsoft developer guide. You can use these API endpoints to integrate with external services and expose selected Moogsoft AIOps functionality to authorized external clients.
 
-We have language bindings in Shell, Ruby, and Python You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+We have language bindings in Javascript, HTML and JSON. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
 # Authentication
 
-> The Graze API supports basic authentication. You can use the default Grazer user credentials for this:
+The Graze API supports basic authentication. You can use the default Grazer user credentials for this:
 
-```javascript
+```http
 username: graze
 password: graze
 ```
 
-> All Graze requests use the following URL format, where server is the hostname of the machine running the UI
+All Graze requests use the following URL format, where server is the hostname of the machine running the UI
 
-```javascript
+```http
 https://<server>/graze/v1/authenticate
 ```
 
-> Make sure to replace `sever` with your instance name.
+Make sure to replace `<server>` with your instance name.
 
 # Alerts
 
