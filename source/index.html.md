@@ -26,47 +26,24 @@ This example API documentation page was created with [Slate](https://github.com/
 
 # Authentication
 
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
+> The Graze API supports basic authentication. You can use the default Grazer user credentials for this:
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
+username: graze
+password: graze
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> All Graze requests use the following URL format, where server is the hostname of the machine running the UI
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+```javascript
+https://<server>/graze/v1/authenticate
+```
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+> Make sure to replace `sever` with your instance name.
 
-`Authorization: meowmeowmeow`
+# Alerts
 
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-# Kittens
-
-## Get All Kittens
+## Get All Alerts
 
 ```ruby
 require 'kittn'
