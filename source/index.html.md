@@ -18,9 +18,18 @@ search: true
 
 Welcome to the Moogsoft developer guide. You can use these API endpoints to integrate with external services and expose selected Moogsoft AIOps functionality to authorized external clients.
 
-We have language bindings in Javascript, HTML and JSON. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+
+# Configuration
+
+The Graze API is implemented as a set of servlets running in the Moogsoft AIOps Tomcat instance that handles external Graze requests, making the UI servlet calls directly via cross-contexts. 
+
+Tomcat must be configured to allow cross-context calls to be made by adding the following to the context.xml file in the Tomcat $APPSERVER_HOME/conf directory:
+```http
+<Context crossContext="true">
+```
 
 # Authentication
 
