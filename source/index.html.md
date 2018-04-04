@@ -16,11 +16,9 @@ search: true
 
 # Introduction
 
-Welcome to the Moogsoft developer guide. You can use these API endpoints to integrate with external services and expose selected Moogsoft AIOps functionality to authorized external clients.
+Welcome to the Graze API guide. You can use these API endpoints to integrate with external services and expose selected Moogsoft AIOps functionality to authorized external clients.
 
 You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
 # Configuration
 
@@ -50,60 +48,17 @@ Make sure to replace `<server>` with your instance name.
 
 # Alerts
 
-## Get All Alerts
+## addAlertCustomInfo
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
+A POST request to add and merge custom information for a specified alert.
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
+curl -X POST -u graze:graze -k -v "https://localhost/graze/v1/addAlertCustomInfo" -H "Content-Type: application/json; charset=UTF-8" -d '{"alert_id" : 9, "custom_info" : { "field1" : "value2" , "field2" : "value2" , "field3" : ["item1","item2","item3"] , "field4" : {"field4-1" : "value4-1","field4-2" : "value4-2"} }}'
 ```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
-
-> The above command returns JSON structured like this:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
+> This command 
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`POST http://example.com/graze/v1/addAlertCustomInfo`
 
 ### Query Parameters
 
