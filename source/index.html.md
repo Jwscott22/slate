@@ -62,10 +62,11 @@ curl -X POST -u graze:graze -k -v "https://localhost/graze/v1/addAlertCustomInfo
 
 ### Query Parameters
 
-Parameter | Default | Description
+Parameter | Type | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+auth_code | String | Valid auth_token returned from the authenticate request.
+alert_id | Number | Valid alert ID
+custom_info | JSON | A JSON Object containing the custom information.
 
 <aside class="success">
 Remember — a happy kitten is an authenticated kitten!
@@ -178,7 +179,7 @@ ID | The ID of the kitten to delete
 # HTTP Status Codes
 The Graze API returns the following HTTP status and error codes:
 
-HHTP Code | Description 
+HTTP Code | Description 
 -------------- | -------------- 
 200 | Success
 400 | Bad Request
