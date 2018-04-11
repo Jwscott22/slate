@@ -59,7 +59,7 @@ A POST request to add and merge custom information for a specified alert.
 ```shell
 curl -X POST -u graze:graze -k -v "https://<server>/graze/v1/addAlertCustomInfo" -H "Content-Type: application/json; charset=UTF-8" -d '{"alert_id" : 9, "custom_info" : { "field1" : "value2" , "field2" : "value2" , "field3" : ["item1","item2","item3"] , "field4" : {"field4-1" : "value4-1","field4-2" : "value4-2"} }}'
 ```
-> This endpoint returns an HTTP status code.
+> This endpoint returns an HTTP status code. See [HTTP Status Codes](#HTTP)
 
 ### HTTP Request
 
@@ -73,35 +73,14 @@ auth_code | String | Valid auth_token returned from the authenticate request.
 alert_id | Number | Valid alert ID
 custom_info | JSON | A JSON Object containing the custom information.
 
-## Get a Specific Kitten
+## addAlertToSituation
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
+A POST request that adds a specified alert to a specified Situation.
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
+curl -X POST -u graze:graze -k -v "https://localhost/graze/v1/addAlertToSituation" -H "Content-Type: application/json; charset=UTF-8" -d '{"alert_id" : 16, "sitn_id" : 7 }'
 ```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
+This endpoint returns an HTTP status code. See [HTTP Status Codes](#HTTP)
 
 ```json
 {
@@ -177,6 +156,7 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
+<a name "HTTP"></a>
 # HTTP Status Codes
 The Graze API returns the following HTTP status and error codes:
 
