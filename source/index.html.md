@@ -46,8 +46,8 @@ https://<server>/graze/v1/authenticate
 All requests, other than `authenticate` require a basic authentication header or a valid `auth_token`. A valid `authenticate` request must be made before you can send a Graze request without a basic authentication header.
 
 Inactive sessions are logged out after an hour and a new `authenticate` request must be sent to get a new `auth_token`.
-<aside class="success">
-If you are making regular Graze endpoints within an hour timeframe, yo are considered active and your session will not expire.
+<aside class="notice">
+If you are making regular Graze endpoints within an hour timeframe, you are considered active and your session will not expire.
 </aside>
 
 # Alerts
@@ -156,8 +156,8 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
-<a name "#HTTP"></a>
-# HTTP Status Codes
+
+# <a name="HTTP"></a> HTTP Status Codes 
 The Graze API returns the following HTTP status and error codes:
 
 HTTP Code | Description 
