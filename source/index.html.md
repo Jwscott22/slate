@@ -177,6 +177,7 @@ ID | The ID of the kitten to delete
 
 # HTTP Status Codes
 The Graze API returns the following HTTP status and error codes:
+
 HHTP Code | Description 
 -------------- | -------------- 
 200 | Success
