@@ -59,7 +59,7 @@ A POST request to add and merge custom information for a specified alert.
 ```shell
 curl -X POST -u graze:graze -k -v "https://<server>/graze/v1/addAlertCustomInfo" -H "Content-Type: application/json; charset=UTF-8" -d '{"alert_id" : 9, "custom_info" : { "field1" : "value2" , "field2" : "value2" , "field3" : ["item1","item2","item3"] , "field4" : {"field4-1" : "value4-1","field4-2" : "value4-2"} }}'
 ```
-> This endpoint returns an HTTP status code. See [HTTP Status Codes](#HTTP)
+This endpoint returns an HTTP status code. See [HTTP Status Codes](#HTTP)
 
 ### HTTP Request
 
@@ -156,7 +156,7 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
-<a name "HTTP"></a>
+<a name "#HTTP"></a>
 # HTTP Status Codes
 The Graze API returns the following HTTP status and error codes:
 
