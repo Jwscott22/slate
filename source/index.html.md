@@ -51,6 +51,7 @@ Make sure to replace `<server>` with your instance name.
 ## addAlertCustomInfo
 
 A POST request to add and merge custom information for a specified alert.
+
 ```shell
 curl -X POST -u graze:graze -k -v "https://localhost/graze/v1/addAlertCustomInfo" -H "Content-Type: application/json; charset=UTF-8" -d '{"alert_id" : 9, "custom_info" : { "field1" : "value2" , "field2" : "value2" , "field3" : ["item1","item2","item3"] , "field4" : {"field4-1" : "value4-1","field4-2" : "value4-2"} }}'
 ```
