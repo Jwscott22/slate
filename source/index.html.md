@@ -18,7 +18,7 @@ search: true
 
 Welcome to the Graze API guide. You can use these API endpoints to integrate with external services and expose selected Moogsoft AIOps functionality to authorized external clients.
 
-You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+You can view code examples in the dark area to the right of the screen.
 
 # Configuration
 
@@ -38,13 +38,17 @@ username: graze
 password: graze
 ```
 
-All Graze requests use the following URL format, where server is the hostname of the machine running the UI
+All Graze requests use the following URL format, where `<server>` is the hostname of your AIOps instance:
 
 ```http
 https://<server>/graze/v1/authenticate
 ```
+All requests, other than `authenticate` require a basic authentication header or a valid `auth_token`. A valid `authenticate` request must be made before you can send a Graze request without a basic authentication header.
 
-Make sure to replace `<server>` with your instance name.
+Inactive sessions are logged out after an hour and a new `authenticate` request must be sent to get a new `auth_token`.
+<aside class="success">
+If you are making regular Graze endpoints within an hour timeframe, yo are considered active and your session will not expire.
+</aside>
 
 # Alerts
 
@@ -53,7 +57,7 @@ Make sure to replace `<server>` with your instance name.
 A POST request to add and merge custom information for a specified alert.
 
 ```shell
-curl -X POST -u graze:graze -k -v "https://localhost/graze/v1/addAlertCustomInfo" -H "Content-Type: application/json; charset=UTF-8" -d '{"alert_id" : 9, "custom_info" : { "field1" : "value2" , "field2" : "value2" , "field3" : ["item1","item2","item3"] , "field4" : {"field4-1" : "value4-1","field4-2" : "value4-2"} }}'
+curl -X POST -u graze:graze -k -v "https://<server>/graze/v1/addAlertCustomInfo" -H "Content-Type: application/json; charset=UTF-8" -d '{"alert_id" : 9, "custom_info" : { "field1" : "value2" , "field2" : "value2" , "field3" : ["item1","item2","item3"] , "field4" : {"field4-1" : "value4-1","field4-2" : "value4-2"} }}'
 ```
 > This endpoint returns an HTTP status code.
 
@@ -68,10 +72,6 @@ Parameter | Type | Description
 auth_code | String | Valid auth_token returned from the authenticate request.
 alert_id | Number | Valid alert ID
 custom_info | JSON | A JSON Object containing the custom information.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
 
 ## Get a Specific Kitten
 
