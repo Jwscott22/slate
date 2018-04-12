@@ -2,7 +2,7 @@
 
 The Graze API returns the following HTTP status and error codes:
 
-Error Code | Meaning
+Code | Meaning
 ---------- | -------
 200 | Success -- Your request was sucessful.
 400 | Bad Request -- Your request is invalid/incorrectly formatted.
