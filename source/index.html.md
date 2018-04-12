@@ -104,18 +104,3 @@ This endpoint returns an HTTP status code. See [HTTP Status Codes](#HTTP)
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
-
-
-# <a name="HTTP"></a> HTTP Status Codes 
-The Graze API returns the following HTTP status and error codes:
-
-HTTP Code | Description 
--------------- | -------------- 
-200 | Success
-400 | Bad Request
-401 | Unauthorised/Invalid auth_code
-403 | Forbidden Request
-500 | Failed Request*
-
-*A failed request might occur if the sitn_id is invalid for example.
-
