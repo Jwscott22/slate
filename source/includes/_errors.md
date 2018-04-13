@@ -1,4 +1,4 @@
-# <a name="HTTP"></a> HTTP Status and Error Codes 
+# <a name="HTTP"></a> Error Codes 
 
 The Graze API returns the following HTTP status and error codes:
 
