@@ -74,10 +74,6 @@ $phone-width: $tablet-width - $nav-width !default; // min width before reverting
   font-size: 14px;
 }
 
-.highlight .err {
-    color: #00C6F4 !important;
-}
-
 %header-font {
   @extend %default-font;
   font-weight: bold;
@@ -104,4 +100,15 @@ $search-box-border-color: #666 !default;
 %break-words {
     word-break: break-all;
     hyphens: auto;
+}
+
+///// Custom edits/overrides /////
+
+.toc-wrapper .logo {
+    margin-left: 18px;
+    margin-top: 6px;
+}
+
+.highlight .err {
+    color: #00C6F4 !important;
 }
