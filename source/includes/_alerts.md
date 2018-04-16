@@ -7,6 +7,10 @@ A POST request to add and merge custom information for a specified alert.
 ```shell
 curl -X POST -u graze:graze -k -v "https://<server>/v1/addAlertCustomInfo" -H "Content-Type: application/json; charset=UTF-8" -d '{"alert_id" : 9, "custom_info" : { "field1" : "value2" , "field2" : "value2" , "field3" : ["item1","item2","item3"] , "field4" : {"field4-1" : "value4-1","field4-2" : "value4-2"} }}'
 ```
+**Test it out:**
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
+
 This endpoint returns an HTTP status code. See [HTTP Status Codes](#HTTP)
 
 ### Query Parameters
@@ -24,6 +28,10 @@ A POST request that adds a specified alert to a specified Situation.
 ```shell
 curl -X POST -u graze:graze -k -v "https://<server>/graze/v1/addAlertToSituation" -H "Content-Type: application/json; charset=UTF-8" -d '{"alert_id" : 16, "sitn_id" : 7 }'
 ```
+**Test it out:**
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
+
 This endpoint returns an HTTP status code. See [HTTP Status Codes](#HTTP)
 
 ### Query Parameters
@@ -41,6 +49,10 @@ A POST request that assigns and acknowledges the moderator tot he Alert for a sp
 ```shell
 curl -X POST -u graze:graze -k -v "https://<server>/graze/v1/assignAndAcknowledgeAlert" -H "Content-Type: application/json; charset=UTF-8" -d '{"alert_id" : 7, "username" : "network1" }'
 ```
+**Test it out:**
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
+
 This endpoint returns an HTTP status code. See [HTTP Status Codes](#HTTP)
 
 ### URL Parameters
