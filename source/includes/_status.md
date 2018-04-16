@@ -1,6 +1,6 @@
-# Error Codes 
+# Status Codes 
 
-The Graze API returns the following HTTP status and error codes:
+The Graze API returns the following HTTP status codes:
 
 Code | Meaning
 ---------- | -------
