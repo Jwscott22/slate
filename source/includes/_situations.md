@@ -11,7 +11,7 @@ curl -X POST -u graze:graze -k -v "https://localhost/graze/v1/addSigCorrelationI
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
 
-This endpoint returns an HTTP status code. See [HTTP Status Codes](#error-codes)
+This endpoint returns an HTTP status code. See [HTTP Status Codes](#status-codes)
 
 ### Query Parameters
 
@@ -33,7 +33,7 @@ curl -X POST -u graze:graze -k -v "https://localhost/graze/v1/addSituationCustom
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
 
-This endpoint returns an HTTP status code. See [HTTP Status Codes](#error-codes)
+This endpoint returns an HTTP status code. See [HTTP Status Codes](#status-codes)
 
 ### Query Parameters
 
@@ -55,7 +55,7 @@ curl -u graze:graze "https://localhost/graze/v1/addThreadEntry" -H "Content-Type
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
 
-This endpoint returns an HTTP status code. See [HTTP Status Codes](#error-codes)
+This endpoint returns an HTTP status code. See [HTTP Status Codes](#status-codes)
 
 ### Query Parameters
 
@@ -86,7 +86,7 @@ curl -u graze:graze "https://localhost/graze/v1/addThreadEntry" -H "Content-Type
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
 
-This endpoint returns an HTTP status code. See [HTTP Status Codes](#error-codes)
+This endpoint returns an HTTP status code. See [HTTP Status Codes](#status-codes)
 
 ### Query Parameters
 
