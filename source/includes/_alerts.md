@@ -11,7 +11,7 @@ curl -X POST -u graze:graze -k -v "https://<server>/v1/addAlertCustomInfo" -H "C
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
 
-This endpoint returns an HTTP status code. See [HTTP Status Codes](#error-codes)
+This endpoint returns an HTTP status code. See [HTTP Status Codes](#status-codes)
 
 ### Query Parameters
 
@@ -32,7 +32,7 @@ curl -X POST -u graze:graze -k -v "https://<server>/graze/v1/addAlertToSituation
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
 
-This endpoint returns an HTTP status code. See [HTTP Status Codes](#error-codes)
+This endpoint returns an HTTP status code. See [HTTP Status Codes](#status-codes)
 
 ### Query Parameters
 
@@ -53,7 +53,7 @@ curl -X POST -u graze:graze -k -v "https://<server>/graze/v1/assignAndAcknowledg
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
 
-This endpoint returns an HTTP status code. See [HTTP Status Codes](#error-codes)
+This endpoint returns an HTTP status code. See [HTTP Status Codes](#status-codes)
 
 ### URL Parameters
 
