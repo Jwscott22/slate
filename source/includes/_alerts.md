@@ -138,7 +138,8 @@ curl -G -u graze:graze -k -v "https://localhost/graze/v1/getAlertDetails" --data
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a5bd1ed9834c3ed28cdb)
 
 This endpoint returns a JSON object: 
-```json
+
+```json 
 {
    "active_sitn_list":[1],
    "agent":"TestBed",
