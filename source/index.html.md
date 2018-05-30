@@ -20,7 +20,7 @@ search: true
 
 Welcome to the Graze API guide. You can use these API endpoints to integrate with external services and expose selected Moogsoft AIOps functionality to authorized external clients.
 
-You can view code examples in the dark area to the right of the screen.
+You can view code examples in the dark area to the right of the screen. You can test the endpoints using the Postman links.
 
 # Configuration
 
